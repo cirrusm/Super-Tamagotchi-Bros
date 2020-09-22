@@ -1,0 +1,58 @@
+* {
+    border-radius: border-box;
+}
+
+#device {
+    width: 80vw;
+    height: 90vh;
+    background-color: grey;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    flex-direction: column;
+    max-width: 700px;
+    min-height: 700px;
+    min-width: 600px;
+    margin: auto;
+    
+
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#screen {
+    width: 60%;
+    height: 50%;
+    background-image: url('/simpson.jpg');
+    display: flex;
+    
+}
+
+body {
+    background-color: beige;
+}
+
+#buttons {
+    display: flex;
+    position: relative;
+    top: 50px;
+}
+button {
+    border-radius: 30%;
+    margin-right: 35px;
+    margin-left: 35px;
+}
+
+#baby-mario {
+    position: relative;
+    top: 220px;
+    left: 200px;
+}
