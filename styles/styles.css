@@ -72,15 +72,47 @@ button {
 }
 
 progress {
-    margin-right: 20px;
-    margin-top: 30px;
+    
+    top: 30px;
     display: flex;
     position: relative;
-    left: 50px;
-    flex-direction: row; 
     height: 20px;
+    
     
     
 }
 
+#happy-label {
+    height: 20px;
+    position: relative;
+    left: 40px;
+    top: 15px;
+}
 
+#hunger-label {
+    height: 20px;
+    position: relative;
+    left: 130px;
+    top: 15px;
+}
+
+#energy-label {
+    height: 20px;
+    position: relative;
+    left: 220px;
+    top: 15px;
+}
+#boredom {
+    position: relative;
+    right: 110px;
+}
+
+#hunger {
+    position: relative;
+    right: 20px;
+}
+
+#tiredness {
+    position: relative;
+    left: 60px; 
+}
