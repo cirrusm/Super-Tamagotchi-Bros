@@ -9,12 +9,23 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  
+  <header> 
+      <h1>Welcome to Tamogachi!</h1>
+      <h3>Help Mario grow into the best version of himself by keeping him fed, energized, and entertained!</h3>
+  </header>
   <div id ="device">
-    <span></span>
+    
     <div id="screen">
+        
+        <progress id = "boredom" value = '5' max = '10'></progress>
+        <progress id = "hunger" value = '5' max = '10'></progress>
+        <progress id="tiredness" value = '7'></progress>
+        
         <div id="character">
            <img id="baby-mario" src="baby mario.png"> 
+        </div>
+        <div id="bed">
+            
         </div>
     </div>
     <div id="buttons">

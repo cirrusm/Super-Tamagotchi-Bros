@@ -1,7 +1,16 @@
 * {
     border-radius: border-box;
 }
-
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+h3 {
+    text-align: center;
+    margin-bottom: 40px;
+}
 #device {
     width: 80vw;
     height: 90vh;
@@ -31,7 +40,7 @@ img {
 #screen {
     width: 60%;
     height: 50%;
-    background-image: url('/simpson.jpg');
+    background-image: url('/emptyroom_450x350.png');
     display: flex;
     
 }
@@ -50,9 +59,28 @@ button {
     margin-right: 35px;
     margin-left: 35px;
 }
-
+#character {
+    position: relative;
+    display: flex;
+    right: 100px;
+}
 #baby-mario {
     position: relative;
-    top: 220px;
-    left: 200px;
+    top: 215px;
+    
+    height: 120px;
 }
+
+progress {
+    margin-right: 20px;
+    margin-top: 30px;
+    display: flex;
+    position: relative;
+    left: 50px;
+    flex-direction: row; 
+    height: 20px;
+    
+    
+}
+
+
