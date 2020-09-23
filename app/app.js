@@ -6,12 +6,16 @@ let hungervalue = $('#hunger').val()
 let energyvalue = $('#tiredness').val()
 let boredvalue = $('#boredom').val()
 let start = $('#start')
+let months = 0
+let years = 0
+//$('.gameplay').hide()
 
 class Tomogachi {
-    constructor(hungervalue, energyvalue, boredvalue){
+    constructor(hungervalue, energyvalue, boredvalue,){
     this.hunger = hungervalue
     this.energy = energyvalue
     this.bored = boredvalue 
+    this.age = 0
 }
 feed = function () {
     if(hungervalue < 10) {
@@ -50,24 +54,41 @@ start.on('click', startTimer)
 
 
 //**************************** TIMER FUNCTIONS ******************************** */
-
+let timer 
 function timerEffects() {
     if(hungervalue <= 0 || energyvalue <= 0 || boredvalue <= 0) {
-        $('#screen').html('<h1> YOU LET MARIO DIE <br><br>GAME OVER</h1>')
+        $('#screen').prepend('<h1> YOU LET MARIO DIE <br><br>GAME OVER</h1>')
+        $('.gameplay').hide()
         start.show()
+        clearInterval(timer)
+        hungervalue = 5
+        boredvalue = 5
+        energyvalue = 5
+        
         
     }else{
+        
     hungervalue -= .3
     energyvalue -= .2
     boredvalue -= .1
+    $('.gameplay').show()
     $('#hunger').val(hungervalue)
     $('#tiredness').val(energyvalue)
     $('#boredom').val(boredvalue)
+    if(months < 12) {
+    months += 1
+    $('#age').text(`Age: ${years} years ${months} months`)
+    }else if(months == 12) {
+        months = 0
+        years += 1
+        $('#age').text(`Age: ${years} years ${months} months`)
+
+    } 
 }
 }
 
 function startTimer() {
- setInterval(timerEffects, 1000)
+ timer = setInterval(timerEffects, 1000)
  start.hide()
 }
 

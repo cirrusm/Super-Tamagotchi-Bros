@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    border: 1px solid red;
+    
 
 }
 h1 {
@@ -44,6 +44,7 @@ img {
     height: 50%;
     background-image: url('/images/emptyroom_450x350.png');
     display: flex;
+    flex-direction: column;
     
 }
 
@@ -70,13 +71,14 @@ button {
 }
 #character {
     position: relative;
+    top: 120px;
+    align-items: center;
+    justify-content: center;
     display: flex;
-    right: 100px;
+    
     
 }
 #baby-mario {
-    position: relative;
-    top: 215px;
     
     height: 120px;
 }
@@ -85,7 +87,7 @@ progress {
     
     top: 30px;
     display: flex;
-    position: relative;
+    margin-left: 20px;
     height: 20px;
     
     
@@ -94,37 +96,37 @@ progress {
 
 #happy-label {
     height: 20px;
-    position: relative;
+    display: flex;
+    flex-direction: row;
     left: 40px;
     top: 15px;
 }
 
 #hunger-label {
     height: 20px;
-    position: relative;
+    display: flex;
+    flex-direction: row;
     left: 130px;
     top: 15px;
 }
 
 #energy-label {
     height: 20px;
-    position: relative;
+    display: flex; 
+    flex-direction: row;
     left: 220px;
     top: 15px;
 }
 #boredom {
-    position: relative;
-    right: 110px;
 }
 
 #hunger {
-    position: relative;
-    right: 20px;
+    margin-left: 42px;
+    
 }
 
 #tiredness {
-    position: relative;
-    left: 60px; 
+    margin-left: 41px;
 }
 #start-div {
     display: flex;
@@ -135,4 +137,12 @@ progress {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#age {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    
 }
