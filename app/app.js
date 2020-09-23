@@ -54,6 +54,7 @@ start.on('click', startTimer)
 function timerEffects() {
     if(hungervalue <= 0 || energyvalue <= 0 || boredvalue <= 0) {
         $('#screen').html('<h1> YOU LET MARIO DIE <br><br>GAME OVER</h1>')
+        start.show()
         
     }else{
     hungervalue -= .3
@@ -67,6 +68,7 @@ function timerEffects() {
 
 function startTimer() {
  setInterval(timerEffects, 1000)
+ start.hide()
 }
 
 
