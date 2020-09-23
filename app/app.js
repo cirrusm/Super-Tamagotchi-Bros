@@ -90,7 +90,7 @@ function timerEffects() {
 
 function evolve() {
     if(years === 1 && months == 0)
-    $('#baby-mario').attr('src', '/images/mario-removebg-preview.png')
+    $('#baby-mario').attr('src', '/output-onlinepngtools (1).png')
     else if ( years === 2 && months == 0) {
     $('#baby-mario').attr('src', '/images/grown mario.png')
     
