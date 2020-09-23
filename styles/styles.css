@@ -1,5 +1,5 @@
 * {
-    border-radius: border-box;
+    box-sizing: border-box;
 }
 h1 {
     text-align: center;
@@ -40,7 +40,7 @@ img {
 #screen {
     width: 60%;
     height: 50%;
-    background-image: url('/emptyroom_450x350.png');
+    background-image: url('/images/emptyroom_450x350.png');
     display: flex;
     
 }
