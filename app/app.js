@@ -56,6 +56,7 @@ start.on('click', startTimer)
 //**************************** TIMER FUNCTIONS ******************************** */
 let timer 
 function timerEffects() {
+    evolve()
     if(hungervalue <= 0 || energyvalue <= 0 || boredvalue <= 0) {
         $('#screen').prepend('<h1> YOU LET MARIO DIE <br><br>GAME OVER</h1>')
         $('.gameplay').hide()
@@ -87,9 +88,21 @@ function timerEffects() {
 }
 }
 
+function evolve() {
+    if(years === 1 && months == 0)
+    $('#baby-mario').attr('src', '/images/mario-removebg-preview.png')
+    else if ( years === 2 && months == 0) {
+    $('#baby-mario').attr('src', '/images/grown mario.png')
+    
+}
+}
+
+
 function startTimer() {
- timer = setInterval(timerEffects, 1000)
- start.hide()
+ timer = setInterval(timerEffects, 300)
+ $('#start-div').hide()
+ $('#age').text(`Age`)
+ $('#name').text(`Name: ${$('#name-input').val()}`)
 }
 
 

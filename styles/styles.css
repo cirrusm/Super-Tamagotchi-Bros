@@ -11,7 +11,10 @@ h1 {
 }
 h3 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+}
+h4{
+    text-align: center;
 }
 #device {
     width: 80vw;
@@ -71,7 +74,8 @@ button {
 }
 #character {
     position: relative;
-    top: 120px;
+    height: 220px;
+    top: 60px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -130,6 +134,7 @@ progress {
 }
 #start-div {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-bottom: 20px;
 }

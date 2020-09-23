@@ -13,16 +13,20 @@
 <body>
   <header> 
       <h1>Welcome to Tamogachi!</h1>
-      <h3>Help Mario grow into the best version of himself by keeping him fed, energized, and entertained!</h3>
+      <h3>Grow your Tamogachi into the best version of itself by keeping it fed, energized, and entertained!</h3>
+      <h4> To start the game, name your Tamogachi in the input field then press the Start Game button</h4>
       
   </header>
   
   <div id ="device">
     <div id = "start-div">
+        <input id ="name-input"> <br>
         <button id = "start"> Start Game</button>
     </div>
     
     <div id="screen">
+        <div class = "gameplay" id ="name"> </div>
+        <div class = "gameplay" id ="age"> </div>
         <div class = "gameplay" id = "happy-label">Happiness:  <progress class = "gameplay" id = "boredom" value = '5' max = '10'></progress> 
         
         </div>
@@ -31,7 +35,7 @@
 
           <div class = "gameplay" id = "energy-label">Energy: <progress class = "gameplay" id="tiredness" value = '7' max = '10'></progress></div>
           
-        <div class = "gameplay" id ="age">Age: </div>
+        
         
         
         
