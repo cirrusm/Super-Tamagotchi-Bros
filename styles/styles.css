@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    border: 1px solid red;
+
 }
 h1 {
     text-align: center;
@@ -53,16 +55,24 @@ body {
     display: flex;
     position: relative;
     top: 50px;
+    height: 80px;
 }
 button {
     border-radius: 30%;
     margin-right: 35px;
     margin-left: 35px;
+    height: 30px
+}
+
+#sleep {
+    position: relative;
+    top: 30px;
 }
 #character {
     position: relative;
     display: flex;
     right: 100px;
+    
 }
 #baby-mario {
     position: relative;
@@ -115,4 +125,14 @@ progress {
 #tiredness {
     position: relative;
     left: 60px; 
+}
+#start-div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
