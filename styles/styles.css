@@ -9,10 +9,10 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: solid 3px white;
-    background-color: rgb(239, 239, 241);
+    
     width: 100%;
-    border-radius: 30%
+    border-radius: 30%;
+    
 }
 
 h1 {
@@ -20,6 +20,8 @@ h1 {
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 50px;
+    font-family: 
+    
 }
 
 h2 {
@@ -31,6 +33,7 @@ h3 {
 }
 h4{
     text-align: center;
+    margin-bottom: 100px;
 }
 #device {
     width: 80vw;
@@ -46,6 +49,7 @@ h4{
     min-height: 700px;
     min-width: 600px;
     margin: auto;
+    margin-bottom: 100px;
     
 
 }
@@ -62,7 +66,8 @@ img {
     width: 60%;
     height: 50%;
     background-image: url('/images/emptyroom_450x350.png');
-    background-color: black;
+    background-repeat: no-repeat;
+    
     display: flex;
     flex-direction: column;
     
@@ -71,6 +76,8 @@ img {
 
 body {
     background-image: url('/images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
 }
@@ -80,12 +87,23 @@ body {
     position: relative;
     top: 50px;
     height: 80px;
+    background-color: grey;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%
 }
 button {
     border-radius: 30%;
     margin-right: 35px;
     margin-left: 35px;
     height: 30px
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: solid 1px black
 }
 
 #sleep {
@@ -192,24 +210,24 @@ progress {
 #marioselect:hover{
     cursor: pointer;
     background-color: red;
-    border: solid 2px white;
+    
 }
 
 #luigiselect:hover{
     cursor: pointer;
     background-color: green;
-    border: solid 2px white;
+    
 
 }
 
 #bowserselect:hover {
     cursor: pointer;
     background-color: peachpuff;
-    border: solid 2px white;
+    
 }
 
 #ball {
-    animation-delay: 3s;
+    animation-delay: 7s;
     position: relative;
     right: -75px;
     width: 50px;
@@ -225,18 +243,18 @@ progress {
 }
 
 #select {
-    border: 3px solid white;
+    
     height: 40vw;
     width: 99vw;
     flex-direction: row;
-    background-color: rgb(239, 239, 241);
+    
     border-radius: 40%
     
 }
 
 .Choose {
-    height: 130px;
-    width: 150px;
+    height: 120px;
+    width: 110px;
     
     flex-direction: row;
     align-items: center;
@@ -244,14 +262,25 @@ progress {
     display: flex;
     margin-top: 40px;
     border-radius: 45%;
-    background-color: rgb(239, 239, 241);
+    
+    
 }
 #choices {
     align-items: center;
     justify-content: space-around;
     display: flex;
     width: 100vw;
+    margin-top: 120px;
+    
+    
 }
+
+#reset {
+    position: relative;
+    top: -50px;
+    width: 70px;
+}
+
 
 @keyframes move {
     0% {
