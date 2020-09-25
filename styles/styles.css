@@ -20,6 +20,10 @@ h1 {
     margin-bottom: 30px;
     font-size: 50px;
 }
+
+h2 {
+    text-align: center;
+}
 h3 {
     text-align: center;
     margin-bottom: 10px;
@@ -67,6 +71,7 @@ img {
 body {
     background-image: url('/images/background.png');
     display: flex;
+    flex-direction: column;
 }
 
 #buttons {
@@ -168,11 +173,7 @@ progress {
     
     
 }
-#ball {
-    width: 50px;
-    height: 50px;
-    
-}
+
 #bed {
     display: flex;
     position: relative;
@@ -187,23 +188,13 @@ progress {
     
 }
 
-#speech{
-    
-    position: absolute;
- background-color: white;
- text-align: center;
- opacity: 0;
- 
-}
-
-#speech:hover {
-    opacity: 0;
-}
 
 #ball {
     animation-delay: 3s;
     position: relative;
     right: -75px;
+    width: 50px;
+    height: 50px;
     
 }
 #fridge {
@@ -212,6 +203,37 @@ progress {
     right: -80px;
     width: 140px;
     height: 140px;
+}
+
+#select {
+    border: 3px solid white;
+    height: 40vw;
+    width: 100vw;
+    flex-direction: row;
+    background-color: grey;
+    
+    
+}
+
+.Choose {
+    height: 130px;
+    width: 150px;
+    border: 1px solid white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-right: 20px;
+    margin-left: 170px;
+    margin-top: 40px;
+    border-radius: 45%;
+    background-color: white;
+}
+#choices {
+    align-items: center;
+    
+    display:flex;
+    width: 100vw;
 }
 
 @keyframes move {
@@ -243,27 +265,6 @@ progress {
     }
 }
 
-@keyframes speechmove {
-    0% {
-        left: px;
-    }
-    1% {
-        left: 2px;
-    }
-
-    50% {
-        left: 300px;
-    }
-
-    51% {
-        left: 298px;
-
-    }
-
-    100% {
-        left: 0px;
-    }
-}
 
 @keyframes lay {
     0% {

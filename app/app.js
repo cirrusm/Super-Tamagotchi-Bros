@@ -36,7 +36,7 @@ sleep = function () {
         $('#tiredness').val(energyvalue)
         $('#baby-mario').css('animation', 'lay 10s')
         $('#ball').css('animation', '')
-        //$('#baby-mario').css('animation', 'move 10s infinite')
+        
     }
 }
 play = function() {
@@ -53,14 +53,13 @@ play = function() {
 
 let mario = new Tomogachi
 
-function showSpeech() {
-    $('#speech').css('opacity', '1')
-}
+
 //**************************** BUTTON EVENT LISTENERS *****************************/
 feed.on('click', mario.feed)
 sleep.on('click', mario.sleep)
 play.on('click', mario.play)
 start.on('click', startTimer)
+
 walk.on('click', function() {
     $('#baby-mario').css('animation', 'move 10s infinite')
     $('#ball').css('animation', '')
@@ -76,7 +75,7 @@ let timer
 function timerEffects() {
     evolve()
     if(hungervalue <= 0 || energyvalue <= 0 || boredvalue <= 0) {
-        $('#screen').prepend('<h1> YOU LET MARIO DIE <br><br>GAME OVER</h1>')
+        $('#screen').prepend(`<h1> YOU LET ${$('#name-input').val().toUpperCase()} DIE <br><br>GAME OVER</h1>`)
         $('.gameplay').hide()
         start.show()
         clearInterval(timer)
@@ -117,7 +116,7 @@ function evolve() {
 
 
 function startTimer() {
- timer = setInterval(timerEffects, 10001)
+ timer = setInterval(timerEffects, 100)
  $('#start-div').hide()
  $('#age').text(`Age: Newborn`)
  $('#name').text(`Name: ${$('#name-input').val()}`)
