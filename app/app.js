@@ -162,7 +162,7 @@ $('#baby-mario').attr('src', '/images/output-onlinepngtools (14).png')
 
 
 function startTimer() {
- timer = setInterval(timerEffects, 500)
+ timer = setInterval(timerEffects, 1500)
  $('#start-div').hide()
  $('#age').text(`Age: Newborn`)
  $('#name').text(`Name: ${$('#name-input').val()}`)
