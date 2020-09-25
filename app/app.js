@@ -9,8 +9,10 @@ let boredvalue = $('#boredom').val()
 let start = $('#start')
 let months = 0
 let years = 0
+let char = 0
 
 $('#device').hide()
+$('#select').hide()
 
 class Tomogachi {
     constructor(hungervalue, energyvalue, boredvalue,){
@@ -58,15 +60,51 @@ let mario = new Tomogachi
 feed.on('click', mario.feed)
 sleep.on('click', mario.sleep)
 play.on('click', mario.play)
-start.on('click', startTimer)
+start.on('click', presscontinue)
+
+// make onclick for all 3 characters
+$('#marioselect').on('click', mariopress)
+$('#luigiselect').on('click', luigipress)
+$('#bowserselect').on('click', bowserpress)
+
 
 walk.on('click', function() {
     $('#baby-mario').css('animation', 'move 10s infinite')
     $('#ball').css('animation', '')
 })
 
+function presscontinue() {
+$('header').hide()
+$('#select').show()
+}
 
+function mariopress() {
+    $('#device').show()
+    $('#select').hide()
+    startTimer()
+    char = 1
+    return char
+    
+}
 
+function luigipress(){
+    $('#baby-mario').attr('src', '/images/output-onlinepngtools (7).png')
+    $('#device').show()
+    $('#select').hide()
+    startTimer()
+    char = 2
+    return char
+
+}
+
+function bowserpress() {
+    $('#baby-mario').attr('src', '/images/output-onlinepngtools (9).png')
+    $('#device').show()
+    $('#select').hide()
+    startTimer()
+    char = 3
+    return char
+}
 
 
 
@@ -106,17 +144,25 @@ function timerEffects() {
 }
 
 function evolve() {
-    if(years === 1 && months == 0)
+    if(years === 1 && months == 0 && char == 1)
     $('#baby-mario').attr('src', '/images/output-onlinepngtools (1).png')
-    else if ( years === 2 && months == 0) {
-    $('#baby-mario').attr('src', '/images/output-onlinepngtools (2).png')
-    
+    else if ( years === 2 && months == 0 && char == 1) {
+    $('#baby-mario').attr('src', '/images/output-onlinepngtools (12).png')  
+} else if ( years == 1 && months == 0 && char == 2) {
+    $('#baby-mario').attr('src', '/images/output-onlinepngtools (10).png')
+} else if (years == 2 && months == 0 && char == 2){
+$('#baby-mario').attr('src', '/images/output-onlinepngtools (11).png')
+}else if (years == 1 && months == 0 && char == 3){
+    $('#baby-mario').attr('src','/images/output-onlinepngtools (13).png')
+}else if (years == 2 && months == 0 && char == 3){
+$('#baby-mario').attr('src', '/images/output-onlinepngtools (14).png')
+
 }
 }
 
 
 function startTimer() {
- timer = setInterval(timerEffects, 100)
+ timer = setInterval(timerEffects, 500)
  $('#start-div').hide()
  $('#age').text(`Age: Newborn`)
  $('#name').text(`Name: ${$('#name-input').val()}`)
