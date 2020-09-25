@@ -3,6 +3,17 @@
     
 
 }
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid white;
+    background-color: grey;
+    width: 100%
+}
+
 h1 {
     text-align: center;
     margin-top: 30px;
@@ -46,13 +57,16 @@ img {
     width: 60%;
     height: 50%;
     background-image: url('/images/emptyroom_450x350.png');
+    background-color: black;
     display: flex;
     flex-direction: column;
+    
     
 }
 
 body {
-    background-color: beige;
+    background-image: url('/images/background.png');
+    display: flex;
 }
 
 #buttons {
@@ -70,7 +84,12 @@ button {
 
 #sleep {
     position: relative;
-    top: 30px;
+    
+}
+
+#walk {
+    position: relative;
+    
 }
 
 
@@ -108,8 +127,6 @@ progress {
     left: 220px;
     top: 15px;
 }
-#boredom {
-}
 
 #hunger {
     margin-left: 42px;
@@ -123,10 +140,12 @@ progress {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
 }
 #start {
     display: flex;
+    width: 90px;
     justify-content: center;
     align-items: center;
 }
@@ -142,43 +161,170 @@ progress {
 #character {
     position: relative;
     height: 220px;
-    top: 60px;
+    
     align-items: center;
     justify-content: center;
     display: flex;
     
     
 }
+#ball {
+    width: 50px;
+    height: 50px;
+    
+}
+#bed {
+    display: flex;
+    position: relative;
+    left: -30px;
+    top: -30px;
+}
 #baby-mario {
     position: absolute;
     height: 120px;
-    animation: move 10s infinite;
+    top: 120px;
+    
+    
+}
+
+#speech{
+    
+    position: absolute;
+ background-color: white;
+ text-align: center;
+ opacity: 0;
+ 
+}
+
+#speech:hover {
+    opacity: 0;
+}
+
+#ball {
+    animation-delay: 3s;
+    position: relative;
+    right: -75px;
+    
+}
+#fridge {
+    position: relative;
+    top: 80px;
+    right: -80px;
+    width: 140px;
+    height: 140px;
 }
 
 @keyframes move {
     0% {
         transform: rotateY(0deg);
-        left: 0;
+        left: 157px;
     }
-    1% {
-        transform: rotateY(180deg);
-        left: 2;
+    50% {
+        transform: rotateY(0deg);
+        left: 0px;
     }
     
-    50% {
-        left: 300px;
+    51% {
+        left: 2px;
         transform: rotateY(180deg)
         
     }
-
-    51% {
-        left: 298px;
-        transform: rotateY(360deg)
-    }
+90% {
+    left: 157px;
+    transform: rotateY(180deg)
+}
+    
+    
     100% {
-        left: 0;
-        transform: rotateY(360deg)
+        left: 157px;
+        transform: rotateY(0deg)
         
         
     }
 }
+
+@keyframes speechmove {
+    0% {
+        left: px;
+    }
+    1% {
+        left: 2px;
+    }
+
+    50% {
+        left: 300px;
+    }
+
+    51% {
+        left: 298px;
+
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes lay {
+    0% {
+        left: 157px
+    }
+    10% {
+        left: 40px;
+        top: 0px;
+    }
+
+    31%{transform: rotate(70deg);
+        left: 40px;
+        top: 0px;
+    }
+
+    60% {transform: rotate(70deg);
+        left: 40px;
+        top: 0px
+    }
+    100% {
+        left: 157px
+    }
+}
+
+@keyframes playball {
+    0% {
+        left: 157px;
+    }
+
+    30% {
+        left: 260px;
+        top: 30px;
+    }
+
+    85% {
+        left: 260px;
+        top: 30px;
+    }
+
+    100% {
+        left: 157px;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+    30%, 60%, 90% {transform: translateY(-30px);} 
+    
+ } 
+
+ @keyframes eat {
+     0% {transform: rotateY(180deg);
+        left: 157px;
+    }
+    50% {transform: rotateY(180deg);
+    left: 260px;}
+
+    51% {transform: rotateY(0deg);
+    left: 258px;}
+
+    100% { transform: translateY(0deg);
+        left: 157px;
+    }
+ }

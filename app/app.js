@@ -2,13 +2,15 @@ let character = $('#character')
 let feed = $('#feed')
 let sleep = $('#sleep')
 let play = $('#play')
+let walk = $('#walk')
 let hungervalue = $('#hunger').val()
 let energyvalue = $('#tiredness').val()
 let boredvalue = $('#boredom').val()
 let start = $('#start')
 let months = 0
 let years = 0
-//$('.gameplay').hide()
+
+$('#device').hide()
 
 class Tomogachi {
     constructor(hungervalue, energyvalue, boredvalue,){
@@ -22,20 +24,27 @@ feed = function () {
     this.hunger += 1
     hungervalue += 1
     $('#hunger').val(hungervalue) 
+    $('#ball').css('animation', '')
+    $('#baby-mario').css('animation', 'eat 5s ease')
     
         }
     }
 sleep = function () {
     if(energyvalue < 10) {
-        this.energy += 1
-        energyvalue += 1
+        this.energy += 3
+        energyvalue += 3
         $('#tiredness').val(energyvalue)
+        $('#baby-mario').css('animation', 'lay 10s')
+        $('#ball').css('animation', '')
+        //$('#baby-mario').css('animation', 'move 10s infinite')
     }
 }
 play = function() {
+    $('#baby-mario').css('animation', 'playball 8s ease')
+    $('#ball').css('animation', 'bounce 6s ease')
     if (boredvalue < 10) {
-        this.bored += 1
-        boredvalue += 1
+        this.bored += 2
+        boredvalue += 2
         $('#boredom').val(boredvalue)
     }
 }
@@ -44,11 +53,20 @@ play = function() {
 
 let mario = new Tomogachi
 
+function showSpeech() {
+    $('#speech').css('opacity', '1')
+}
 //**************************** BUTTON EVENT LISTENERS *****************************/
 feed.on('click', mario.feed)
 sleep.on('click', mario.sleep)
 play.on('click', mario.play)
 start.on('click', startTimer)
+walk.on('click', function() {
+    $('#baby-mario').css('animation', 'move 10s infinite')
+    $('#ball').css('animation', '')
+})
+
+
 
 
 
@@ -76,10 +94,10 @@ function timerEffects() {
     $('#hunger').val(hungervalue)
     $('#tiredness').val(energyvalue)
     $('#boredom').val(boredvalue)
-    if(months < 12) {
+    if(months < 11) {
     months += 1
     $('#age').text(`Age: ${years} years ${months} months`)
-    }else if(months == 12) {
+    }else{
         months = 0
         years += 1
         $('#age').text(`Age: ${years} years ${months} months`)
@@ -90,20 +108,23 @@ function timerEffects() {
 
 function evolve() {
     if(years === 1 && months == 0)
-    $('#baby-mario').attr('src', '/output-onlinepngtools (1).png')
+    $('#baby-mario').attr('src', '/images/output-onlinepngtools (1).png')
     else if ( years === 2 && months == 0) {
-    $('#baby-mario').attr('src', '/images/grown mario.png')
+    $('#baby-mario').attr('src', '/images/output-onlinepngtools (2).png')
     
 }
 }
 
 
 function startTimer() {
- timer = setInterval(timerEffects, 300)
+ timer = setInterval(timerEffects, 10001)
  $('#start-div').hide()
- $('#age').text(`Age`)
+ $('#age').text(`Age: Newborn`)
  $('#name').text(`Name: ${$('#name-input').val()}`)
+ $('#device').show()
+ $('header').hide()
 }
+
 
 
 
