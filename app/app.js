@@ -66,6 +66,8 @@ start.on('click', presscontinue)
 $('#marioselect').on('click', mariopress)
 $('#luigiselect').on('click', luigipress)
 $('#bowserselect').on('click', bowserpress)
+$('#peachselect').on('click', peachpress)
+$('#dkselect').on('click', dkpress)
 
 
 walk.on('click', function() {
@@ -111,6 +113,24 @@ function bowserpress() {
     return char
 }
 
+function peachpress() {
+    $('#baby-mario').attr('src', '/images/babypeach.png')
+    $('#device').show()
+    $('#select').hide()
+    startTimer()
+    char = 4
+    return char
+
+}
+
+function dkpress() {
+    $('#baby-mario').attr('src', '/images/output-onlinepngtools (22).png')
+    $('#device').show()
+    $('#select').hide()
+    startTimer()
+    char = 5
+    return char
+}
 //make peach and dk press functions
 
 
@@ -171,9 +191,16 @@ $('#baby-mario').attr('src', '/images/output-onlinepngtools (11).png')
 }else if (years == 2 && char == 3){
 $('#baby-mario').attr('src', '/images/output-onlinepngtools (14).png')
 //make peach and dk evolve functions
+} else if ( years == 1 && char == 4) {
+    $('#baby-mario').attr('src', '/images/output-onlinepngtools (19).png')
+} else if (years == 2 && char == 4){
+$('#baby-mario').attr('src', '/images/output-onlinepngtools (20).png')
+}else if (years == 1 && char == 5){
+    $('#baby-mario').attr('src','/images/output-onlinepngtools (21).png')
+}else if (years == 2 && char == 5){
+$('#baby-mario').attr('src', '/images/output-onlinepngtools (24).png')
 }
 }
-
 
 //***************************RESET BUTTON********************** */
 

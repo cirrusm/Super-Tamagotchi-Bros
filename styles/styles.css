@@ -285,6 +285,26 @@ progress {
     margin: auto;
 }
 
+#p {
+  width: 180px;
+  height: 110px;  
+}
+
+#peachselect:hover {
+    background-color: pink;
+    cursor: pointer;
+}
+
+#d {
+    width: 80px;
+    height: 90px;
+}
+
+#dkselect:hover {
+cursor: pointer;
+background-color: brown;
+}
+
 
 @keyframes move {
     0% {
