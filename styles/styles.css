@@ -38,7 +38,7 @@ h4{
 #device {
     width: 80vw;
     height: 90vh;
-    background-color: rgb(59, 58, 58);
+    background-color: grey;
     margin-left: 50px;
     display: flex;
     justify-content: center;
@@ -86,11 +86,11 @@ body {
     display: flex;
     position: relative;
     top: 50px;
-    height: 80px;
-    background-color: grey;
+    height: 70px;
+    background-color: rgb(59, 58, 58);
     justify-content: center;
     align-items: center;
-    border-radius: 50%
+    border-radius: 25%
 }
 button {
     border-radius: 30%;
@@ -101,7 +101,7 @@ button {
 
 button:hover {
     cursor: pointer;
-    background-color: black;
+    background-color: grey;
     color: white;
     border: solid 1px black
 }
@@ -279,6 +279,10 @@ progress {
     position: relative;
     top: -50px;
     width: 70px;
+}
+
+#tomb {
+    margin: auto;
 }
 
 

@@ -11,8 +11,9 @@ let months = 0
 let years = 0
 let char = 0
 
-//$('#device').hide()
+$('#device').hide()
 $('#select').hide()
+$('#lose').hide()
 
 class Tomogachi {
     constructor(hungervalue, energyvalue, boredvalue,){
@@ -78,9 +79,11 @@ walk.on('click', function() {
 function presscontinue() {
 $('header').hide()
 $('#select').show()
+$('#baby-mario').css('animation', 'move 10s infinite')
 }
 
 function mariopress() {
+    $('#baby-mario').attr('src', '/images/baby mario.png')
     $('#device').show()
     $('#select').hide()
     startTimer()
@@ -115,7 +118,7 @@ let timer
 function timerEffects() {
     evolve()
     if(hungervalue <= 0 || energyvalue <= 0 || boredvalue <= 0) {
-        $('#screen').prepend(`<h1 class = "lose"> YOU LET ${$('#name-input').val().toUpperCase()} DIE <br><br>GAME OVER</h1>`)
+     $('#lose').show()
         $('.gameplay').hide()
         start.show()
         clearInterval(timer)
@@ -123,16 +126,16 @@ function timerEffects() {
         
         
     }else{
-        
-    hungervalue -= .1
-    energyvalue -= .06
-    boredvalue -= .033
+    evolve()
+    hungervalue -= .03
+    energyvalue -= .02
+    boredvalue -= .01
     $('.gameplay').show()
     $('#hunger').val(hungervalue)
     $('#tiredness').val(energyvalue)
     $('#boredom').val(boredvalue)
     if(months < 11) {
-    months += .3
+    months += .05
     $('#age').text(`Age: ${years} years ${Math.floor(months)} months`)
     }else{
         months = 0
@@ -145,7 +148,6 @@ function timerEffects() {
 
 function startTimer() {
     timer = setInterval(timerEffects, 100)
-    $('#start-div').hide()
     $('#age').text(`Age: Newborn`)
     $('#name').text(`Name: ${$('#name-input').val()}`)
     $('#device').show()
@@ -153,33 +155,47 @@ function startTimer() {
    }
 
 
-
+// *******************************EVOLVE FUNCTIONS***********************
 function evolve() {
-    if(years === 1 && months == 0 && char == 1)
+    if(years === 1 && char == 1)
     $('#baby-mario').attr('src', '/images/output-onlinepngtools (1).png')
-    else if ( years === 2 && months == 0 && char == 1) {
+    else if ( years === 2 && char == 1) {
     $('#baby-mario').attr('src', '/images/output-onlinepngtools (12).png')  
-} else if ( years == 1 && months == 0 && char == 2) {
+} else if ( years == 1 && char == 2) {
     $('#baby-mario').attr('src', '/images/output-onlinepngtools (10).png')
-} else if (years == 2 && months == 0 && char == 2){
+} else if (years == 2 && char == 2){
 $('#baby-mario').attr('src', '/images/output-onlinepngtools (11).png')
-}else if (years == 1 && months == 0 && char == 3){
+}else if (years == 1 && char == 3){
     $('#baby-mario').attr('src','/images/output-onlinepngtools (13).png')
-}else if (years == 2 && months == 0 && char == 3){
+}else if (years == 2 && char == 3){
 $('#baby-mario').attr('src', '/images/output-onlinepngtools (14).png')
 
 }
 }
 
 
-//reset
+//***************************RESET BUTTON********************** */
 
 $('#reset').on('click', function() {
+
+    clearInterval(timer)
     hungervalue = 7;
     energyvalue = 7;
     boredvalue = 7;
+    years = 0;
+    months = 0;
    
+    $('#ball').css('animation', '')
+    $('#hunger').val(hungervalue)
+    $('#tiredness').val(energyvalue)
+    $('#boredom').val(boredvalue)
+    $('#age').text(`Age: ${years} years ${Math.floor(months)} months`)
+
     $('.gameplay').show()
+    $('#lose').hide()
+    $('#device').hide()
+    $('header').show()
+    
 
 })
 
