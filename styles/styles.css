@@ -210,12 +210,15 @@ progress {
 #marioselect:hover{
     cursor: pointer;
     background-color: red;
+    animation: none
+    
     
 }
 
 #luigiselect:hover{
     cursor: pointer;
     background-color: green;
+    animation: none
     
 
 }
@@ -223,6 +226,7 @@ progress {
 #bowserselect:hover {
     cursor: pointer;
     background-color: peachpuff;
+    animation: none
     
 }
 
@@ -262,6 +266,9 @@ progress {
     display: flex;
     margin-top: 40px;
     border-radius: 45%;
+    position: relative;
+    animation: updown 3s infinite;
+    
     
     
 }
@@ -293,16 +300,29 @@ progress {
 #peachselect:hover {
     background-color: pink;
     cursor: pointer;
+    animation: none
+    
 }
 
 #d {
     width: 80px;
     height: 90px;
+   
 }
 
 #dkselect:hover {
 cursor: pointer;
 background-color: brown;
+animation: none
+
+}
+
+#peachselect{
+    animation: downup 3s infinite
+}
+
+#dkselect {
+    animation: downup 3s infinite
 }
 
 
@@ -398,4 +418,16 @@ background-color: brown;
     100% { transform: translateY(0deg);
         left: 157px;
     }
+ }
+
+ @keyframes updown {
+     0% {top: 0px}
+     50% {top: 20px}
+     100% {top: 0px}
+ }
+
+ @keyframes downup {
+     0% {top: 20px}
+     50% {top: 0px}
+     100%{top: 20px}
  }
