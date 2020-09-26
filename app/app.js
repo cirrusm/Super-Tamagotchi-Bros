@@ -111,6 +111,7 @@ function bowserpress() {
     return char
 }
 
+//make peach and dk press functions
 
 
 //**************************** TIMER FUNCTIONS ******************************** */
@@ -169,7 +170,7 @@ $('#baby-mario').attr('src', '/images/output-onlinepngtools (11).png')
     $('#baby-mario').attr('src','/images/output-onlinepngtools (13).png')
 }else if (years == 2 && char == 3){
 $('#baby-mario').attr('src', '/images/output-onlinepngtools (14).png')
-
+//make peach and dk evolve functions
 }
 }
 
