@@ -18,5 +18,22 @@ Super Tamagotchi Bros will allow for its users to simulate the original Tamagotc
 ## Wireframes
 
 ### Landing Page
+
+This is where the user will start when starting the game. After naming their Tamagotchi they will be redirected to the select character page.
+
 ![image](assets/First.png)
+
+
+### Select Character Page
+
+On this page there will be a selection of characters for the user to choose from. These will all be baby versions of characters from the Super Mario Brothers Series. After selecting a character, the game will automatically start.
+
+![image](assets/Second.png)
+
+
+### Game Screen
+
+This is where the actual game will be played. The buttons on the Tamagotchi will trigger various animations and increase the value of the characters "progression bars". Other features will include a "Reset" button to start the game over at any time, and a "Randomize Device Color" button that users can use to change up the color of their device.
+
+![image](assets/Third.png)
 
