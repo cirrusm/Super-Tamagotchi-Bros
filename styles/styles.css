@@ -126,17 +126,20 @@ img {
     left: 67px;
 }
 
+.night {
+    background-image: url("/images/back488x388.png")
+}
+
 #screen {
     width: 70%;
     height: 55%;
-    background-image: url('/images/resizedbackkk.png');
     background-repeat: no-repeat;
     position: relative;
     top: -20px;
     display: flex;
     flex-direction: column;
     border: solid 4px black;
-    
+    background-image: url("/images/resizedbackkk.png");
     border-radius: 3%;
     
     
@@ -428,7 +431,16 @@ animation: none
     right: 400px;
 }
 
-
+#lose {
+    background-color: black;
+    color: white;
+    height: 378px;
+    top: -30px;
+    border-radius: 3px;
+    padding-top: 60px;
+    position: absolute;
+    overflow: visible;
+}
 
 
 @keyframes move {
@@ -513,20 +525,23 @@ animation: none
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
-    30%, 60%, 90% {transform: translateY(-30px);} 
+    0%, 20%, 40%, 60%, 80%, 100% {transform: translateY(0);} 
+    10%, 30%, 50%, 70%, 90% {transform: translateY(-30px);} 
     
  } 
 
  @keyframes eat {
      0% {
+         
         left: 190px;
     }
     50% {
-    left: 100px;}
+        top: 10px;
+    left: 97px;}
 
     51% {
-    left: 100px;}
+        top: 10px;
+    left: 97px;}
 
     100% { 
         left: 190px;
@@ -543,4 +558,19 @@ animation: none
      0% {top: 20px}
      50% {top: 0px}
      100%{top: 20px}
+ }
+
+ @keyframes mush {
+     0% {transform: rotate(30deg);
+    }
+
+     20% {transform: rotate(-30deg)}
+
+     40% {transform: rotate(20deg)}
+
+     60% {transform: rotate(-20deg)}
+
+     80% {transform: rotate(10deg)}
+
+     100${transform: rotate(-10deg)}
  }
