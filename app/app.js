@@ -146,6 +146,7 @@ function timerEffects() {
         
         
         
+        
     }else{
     evolve()
     hungervalue -= .03
@@ -173,9 +174,9 @@ function startTimer() {
     $('#name').text(`Name: ${$('#name-input').val()}`)
     $('#device').show()
     $('header').hide()
-   }
+    
 
-
+}
 // *******************************EVOLVE FUNCTIONS***********************
 function evolve() {
     if(years === 1 && char == 1)
@@ -213,6 +214,8 @@ $('#reset').on('click', function() {
     years = 0;
     months = 0;
    
+   
+
     $('#ball').css('animation', '')
     $('#hunger').val(hungervalue)
     $('#tiredness').val(energyvalue)
@@ -225,6 +228,16 @@ $('#reset').on('click', function() {
     $('header').show()
     
 
+})
+
+
+//**************EXTRAS**********************
+
+//randomize device color
+
+$('#randomize').on('click', function () {
+    $('#device').css(`background-color`, `rgb(${Math.floor(Math.random() * 257)}, ${Math.floor(Math.random() * 257)}, ${Math.floor(Math.random() * 257)})`)
+    $('#buttons').css(`background-color`, `rgb(${Math.floor(Math.random() * 257)}, ${Math.floor(Math.random() * 257)}, ${Math.floor(Math.random() * 257)})`)
 })
 
 

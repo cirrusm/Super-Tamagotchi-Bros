@@ -323,7 +323,14 @@ animation: none
 #dkselect {
     animation: downup 3s infinite
 }
+#tomb {
+    margin-top: 20px;
+}
 
+#randomize {
+    position: relative;
+    right: 400px;
+}
 
 @keyframes move {
     0% {
@@ -353,6 +360,8 @@ animation: none
         
     }
 }
+
+
 
 
 @keyframes lay {
