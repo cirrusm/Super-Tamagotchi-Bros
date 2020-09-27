@@ -29,8 +29,8 @@ feed = function () {
     $('#screen').css('background-image', 'url("/images/resizedbackkk.png")')
 
     if(hungervalue < 10) {
-    this.hunger += 4
-    hungervalue += 4
+    this.hunger += 3
+    hungervalue += 3
     $('#hunger').val(hungervalue) 
     
     
@@ -42,8 +42,8 @@ sleep = function () {
         $('#mushroom').css('animation', '')
         $('#screen').css('background-image', 'url("/images/back488x388.png")')
     if(energyvalue < 10) {
-        this.energy += 5
-        energyvalue += 5
+        this.energy += 3
+        energyvalue += 3
         $('#tiredness').val(energyvalue)
         
         
@@ -163,15 +163,15 @@ function timerEffects() {
         
     }else{
     evolve()
-    hungervalue -= .03
-    energyvalue -= .02
-    boredvalue -= .01
+    hungervalue -= .06
+    energyvalue -= .04
+    boredvalue -= .02
     $('.gameplay').show()
     $('#hunger').val(hungervalue)
     $('#tiredness').val(energyvalue)
     $('#boredom').val(boredvalue)
     if(months < 11) {
-    months += .05
+    months += .5
     $('#age').text(`Age: ${years} years ${Math.floor(months)} months`)
     }else{
         months = 0
@@ -193,26 +193,26 @@ function startTimer() {
 }
 // *******************************EVOLVE FUNCTIONS***********************
 function evolve() {
-    if(years === 1 && char == 1)
+    if(years === 5 && char == 1)
     $('#baby-mario').attr('src', '/images/output-onlinepngtools (1).png')
-    else if ( years === 2 && char == 1) {
+    else if ( years === 10 && char == 1) {
     $('#baby-mario').attr('src', '/images/output-onlinepngtools (12).png')  
-} else if ( years == 1 && char == 2) {
+} else if ( years == 5 && char == 2) {
     $('#baby-mario').attr('src', '/images/output-onlinepngtools (10).png')
-} else if (years == 2 && char == 2){
+} else if (years == 10 && char == 2){
 $('#baby-mario').attr('src', '/images/output-onlinepngtools (11).png')
-}else if (years == 1 && char == 3){
+}else if (years == 5 && char == 3){
     $('#baby-mario').attr('src','/images/output-onlinepngtools (13).png')
-}else if (years == 2 && char == 3){
+}else if (years == 10 && char == 3){
 $('#baby-mario').attr('src', '/images/output-onlinepngtools (14).png')
 //make peach and dk evolve functions
-} else if ( years == 1 && char == 4) {
+} else if ( years == 5 && char == 4) {
     $('#baby-mario').attr('src', '/images/output-onlinepngtools (19).png')
-} else if (years == 2 && char == 4){
+} else if (years == 10 && char == 4){
 $('#baby-mario').attr('src', '/images/output-onlinepngtools (20).png')
-}else if (years == 1 && char == 5){
+}else if (years == 5 && char == 5){
     $('#baby-mario').attr('src','/images/output-onlinepngtools (21).png')
-}else if (years == 2 && char == 5){
+}else if (years == 10 && char == 5){
 $('#baby-mario').attr('src', '/images/output-onlinepngtools (24).png')
 }
 }
@@ -228,6 +228,7 @@ $('#reset').on('click', function() {
     years = 0;
     months = 0;
    
+    $('#device').css('background-color', 'rgb(205, 245, 189)')
     $('#mushroom').css('animation', '')
     $('#screen').css('background-image', 'url("/images/resizedbackkk.png")')
     $('#ball').css('animation', '')

@@ -18,5 +18,5 @@ Super Tamagotchi Bros will allow for its users to simulate the original Tamagotc
 ## Wireframes
 
 ### Landing Page
-![landingpage](/assets/Screen Shot 2020-09-26 at 6.12.22 PM.png)
+![image](https://imgur.com/ODgv6o0)
 

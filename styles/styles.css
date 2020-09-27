@@ -53,7 +53,7 @@ h4{
 #device {
     width: 80vw;
     height: 90vh;
-    background-color: grey;
+    background-color: rgb(205, 245, 189);
     margin-left: 50px;
     display: flex;
     justify-content: center;
@@ -141,6 +141,7 @@ img {
     border: solid 4px black;
     background-image: url("/images/resizedbackkk.png");
     border-radius: 3%;
+    max-height: 378px;
     
     
     
@@ -250,7 +251,7 @@ progress {
 }
 
 #tiredness {
-    margin-left: 41px;
+    margin-left: 44px;
 }
 #start-div {
     display: flex;
@@ -434,7 +435,7 @@ animation: none
 #lose {
     background-color: black;
     color: white;
-    height: 378px;
+    height: 370px;
     top: -30px;
     border-radius: 3px;
     padding-top: 60px;
@@ -537,11 +538,13 @@ animation: none
     }
     50% {
         top: 10px;
-    left: 97px;}
+    left: 97px;
+}
 
     51% {
         top: 10px;
-    left: 97px;}
+    left: 97px;
+}
 
     100% { 
         left: 190px;
