@@ -28,7 +28,7 @@ feed = function () {
     hungervalue += 4
     $('#hunger').val(hungervalue) 
     $('#ball').css('animation', '')
-    $('#baby-mario').css('animation', 'eat 5s ease')
+    $('#baby-mario').css('animation', 'eat 6s ease')
     
         }
     }
@@ -37,13 +37,13 @@ sleep = function () {
         this.energy += 5
         energyvalue += 5
         $('#tiredness').val(energyvalue)
-        $('#baby-mario').css('animation', 'lay 8s')
+        $('#baby-mario').css('animation', 'lay 8s ease')
         $('#ball').css('animation', '')
         
     }
 }
 play = function() {
-    $('#baby-mario').css('animation', 'playball 8s ease')
+    $('#baby-mario').css('animation', 'playball 7.5s ease')
     $('#ball').css('animation', 'bounce 6s ease')
     if (boredvalue < 10) {
         this.bored += 3
@@ -85,7 +85,9 @@ $('#baby-mario').css('animation', 'move 10s infinite')
 }
 
 function mariopress() {
-    $('#baby-mario').attr('src', '/images/baby mario.png')
+    $('#baby-mario').attr('src', 'images/baby mario.png')
+    
+
     $('#device').show()
     $('#select').hide()
     startTimer()
@@ -169,7 +171,7 @@ function timerEffects() {
 }
 
 function startTimer() {
-    timer = setInterval(timerEffects, 100)
+    timer = setInterval(timerEffects, 500)
     $('#age').text(`Age: Newborn`)
     $('#name').text(`Name: ${$('#name-input').val()}`)
     $('#device').show()

@@ -20,7 +20,7 @@ header {
 
 #cloud {
     background-color: white;
-    border-radius: 30%;
+    border-radius: 30px;
     margin-bottom: 60px;
     box-shadow: 3px 3px 3px;
     width: 90vw;
@@ -79,7 +79,7 @@ h4{
     box-shadow: 3px 3px 3px;
     position: relative;
     animation: updown 5s infinite;
-    border-radius: 30%;
+    border-radius: 30px;
 }
 
 img {
@@ -92,32 +92,53 @@ img {
 
 #me{
     position: relative;
-    margin-top: 290px;
-    left: -440px;
+    margin-top: 220px;
+    left: -470px;
     font-size: 12px;
 }
 
 #start {
     background-color: white;
-    border-radius: 0%;
     height: 30px;
     margin-top: 30px;
     position: relative;
     animation: updown 6s infinite;
-    border-radius: 30%
+    border-radius: 30px;
+}
+#adjust {
+    background-color: white;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    top: 39px;
+    border-radius: 6px;
+    border: solid 4px black;
+    width: 490px;
+    left: -4px;
+    
+}
+
+#mushroom {
+    width: 90px;
+    height: 60px;
+    position: relative;
+    top: 77px;
+    left: 67px;
 }
 
 #screen {
-    width: 60%;
-    height: 50%;
-    background-image: url('/images/emptyroom_450x350.png');
+    width: 70%;
+    height: 55%;
+    background-image: url('/images/resizedbackkk.png');
     background-repeat: no-repeat;
-    
+    position: relative;
+    top: -20px;
     display: flex;
     flex-direction: column;
-    border: solid 3px black;
+    border: solid 4px black;
+    
     border-radius: 3%;
-    max-height: 350px
+    
     
     
 }
@@ -253,7 +274,6 @@ progress {
 #character {
     position: relative;
     height: 220px;
-    
     align-items: center;
     justify-content: center;
     display: flex;
@@ -261,17 +281,11 @@ progress {
     
 }
 
-#bed {
-    display: flex;
-    position: relative;
-    left: -30px;
-    top: -30px;
-}
+
 #baby-mario {
     position: absolute;
     height: 120px;
     top: 120px;
-    
     
 }
 
@@ -301,18 +315,13 @@ progress {
 #ball {
     animation-delay: 7s;
     position: relative;
+    top: 100px;
     right: -75px;
     width: 50px;
     height: 50px;
     
 }
-#fridge {
-    position: relative;
-    top: 70px;
-    right: -80px;
-    width: 140px;
-    height: 140px;
-}
+
 
 #select {
     
@@ -324,12 +333,23 @@ progress {
     
 }
 
+
+
+
 #selectheading {
 background-color: white;
 width: 80vw;
 margin: 0 auto;
-border-radius: 30%;
-height: 
+margin-top: 80px;
+height: 150px;
+border-radius: 30px;
+position: relative;
+animation: updown 5s infinite;
+}
+
+#selectheader {
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .Choose {
@@ -383,7 +403,6 @@ height:
 #d {
     width: 80px;
     height: 90px;
-   
 }
 
 #dkselect:hover {
@@ -409,10 +428,13 @@ animation: none
     right: 400px;
 }
 
+
+
+
 @keyframes move {
     0% {
         transform: rotateY(0deg);
-        left: 157px;
+        left: 190px;
     }
     50% {
         transform: rotateY(0deg);
@@ -425,13 +447,13 @@ animation: none
         
     }
 90% {
-    left: 157px;
+    left: 190px;
     transform: rotateY(180deg)
 }
     
     
     100% {
-        left: 157px;
+        left: 190px;
         transform: rotateY(0deg)
         
         
@@ -443,44 +465,50 @@ animation: none
 
 @keyframes lay {
     0% {
-        left: 157px
+        left: 190px
     }
     10% {
-        left: 40px;
-        top: 0px;
+        left: 335px;
+        top: 50px;
     }
 
     31%{transform: rotate(70deg);
-        left: 40px;
-        top: 0px;
+        left: 350px;
+        top: 50px;
     }
 
     60% {transform: rotate(70deg);
-        left: 40px;
-        top: 0px
+        left: 350px;
+        top: 50px
     }
     100% {
-        left: 157px
+        left: 190px
     }
 }
 
 @keyframes playball {
     0% {
-        left: 157px;
+        transform: rotateY(180deg);
+        left: 190px;
     }
 
     30% {
-        left: 260px;
-        top: 30px;
+        transform: rotateY(180deg);
+        left: 220px;
+        top: 123px;
     }
 
     85% {
-        left: 260px;
-        top: 30px;
+        transform: rotateY(180deg);
+        left: 220px;
+        top: 123px;
+    }
+    87% {
+        transform: rotateY(0deg);
     }
 
     100% {
-        left: 157px;
+        left: 190px;
     }
 }
 
@@ -491,17 +519,17 @@ animation: none
  } 
 
  @keyframes eat {
-     0% {transform: rotateY(180deg);
-        left: 157px;
+     0% {
+        left: 190px;
     }
-    50% {transform: rotateY(180deg);
-    left: 260px;}
+    50% {
+    left: 100px;}
 
-    51% {transform: rotateY(0deg);
-    left: 258px;}
+    51% {
+    left: 100px;}
 
-    100% { transform: translateY(0deg);
-        left: 157px;
+    100% { 
+        left: 190px;
     }
  }
 
