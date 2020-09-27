@@ -237,7 +237,7 @@ $('#reset').on('click', function() {
 
 $('#randomize').on('click', function () {
     $('#device').css(`background-color`, `rgb(${Math.floor(Math.random() * 257)}, ${Math.floor(Math.random() * 257)}, ${Math.floor(Math.random() * 257)})`)
-    $('#buttons').css(`background-color`, `rgb(${Math.floor(Math.random() * 257)}, ${Math.floor(Math.random() * 257)}, ${Math.floor(Math.random() * 257)})`)
+    
 })
 
 

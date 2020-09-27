@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace
     
 
 }
@@ -9,11 +10,26 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 100px;
     
-    width: 100%;
     border-radius: 30%;
     
+    
+    
 }
+
+#cloud {
+    background-color: white;
+    border-radius: 30%;
+    margin-bottom: 60px;
+    box-shadow: 3px 3px 3px;
+    width: 90vw;
+    position: relative;
+    animation: updown 3s infinite;
+    
+}
+
+
 
 h1 {
     text-align: center;
@@ -49,8 +65,21 @@ h4{
     min-width: 600px;
     margin: auto;
     margin-bottom: 100px;
+    box-shadow: 10px 10px 80px;
+    max-height: 750px
     
 
+}
+
+#name-input {
+    height: 30px;
+    width: 150px;
+    font-size: 30px;
+    text-align: center;
+    box-shadow: 3px 3px 3px;
+    position: relative;
+    animation: updown 5s infinite;
+    border-radius: 30%;
 }
 
 img {
@@ -61,6 +90,23 @@ img {
     justify-content: center;
 }
 
+#me{
+    position: relative;
+    margin-top: 290px;
+    left: -440px;
+    font-size: 12px;
+}
+
+#start {
+    background-color: white;
+    border-radius: 0%;
+    height: 30px;
+    margin-top: 30px;
+    position: relative;
+    animation: updown 6s infinite;
+    border-radius: 30%
+}
+
 #screen {
     width: 60%;
     height: 50%;
@@ -69,13 +115,17 @@ img {
     
     display: flex;
     flex-direction: column;
+    border: solid 3px black;
+    border-radius: 3%;
+    max-height: 350px
     
     
 }
 
 body {
-    background-image: url('/images/background.png');
+    background-image: url('/images/aec6eaa71938036b649a16cd9a5c99ae.jpg');
     background-size: cover;
+    height: 100vh;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -86,33 +136,52 @@ body {
     position: relative;
     top: 50px;
     height: 70px;
-    background-color: rgb(59, 58, 58);
+    background-color: none;
     justify-content: center;
     align-items: center;
-    border-radius: 25%
+    border-radius: 25%;
+    
 }
 button {
     border-radius: 30%;
-    margin-right: 35px;
-    margin-left: 35px;
-    height: 30px
+    margin-right: 25px;
+    margin-left: 25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px;
+    font-family: 'Courier New', Courier, monospace
 }
 
 button:hover {
     cursor: pointer;
-    background-color: grey;
-    color: white;
-    border: solid 1px black
+    box-shadow: 0px 0px 0px;
+    border: 0px;
+    
+}
+
+#randomize {
+    width: 100px;
 }
 
 #sleep {
     position: relative;
-    
+    top: 10px;
 }
 
 #walk {
     position: relative;
-    
+    top: 10px;
+}
+
+#play {position: relative;
+    top: -20px
+
+}
+
+#feed {
+    position: relative;
+    top: -20px;
 }
 
 
@@ -239,7 +308,7 @@ progress {
 }
 #fridge {
     position: relative;
-    top: 80px;
+    top: 70px;
     right: -80px;
     width: 140px;
     height: 140px;
@@ -253,6 +322,14 @@ progress {
     
     border-radius: 40%
     
+}
+
+#selectheading {
+background-color: white;
+width: 80vw;
+margin: 0 auto;
+border-radius: 30%;
+height: 
 }
 
 .Choose {
