@@ -1,4 +1,4 @@
-# Super Tamogachi Bros
+# Super Tamagotchi Bros
 
 ## User Story
 
@@ -10,9 +10,9 @@ Super Tamagotchi Bros will allow for its users to simulate the original Tamagotc
 
  On the "Choose Character" page, users will be able to choose from the baby versions of Mario, Luigi, Princess Peach, Donkey Kong, and Bowser. Upon selecting a character, the Tamagotchi "device" will appear and the game will begin.
 
- When the game begins, the user will see the character that they selected inside of the Tamagotchi device screen. The name and age of the Tamagotchi will be displayed in the top left hand corner of the screen. There will also be progress bars that display how satiated, energized, and happy the Tamagotchi is. These bars will continuosly decrement as the game goes on. The user will have to monitor these bars and make sure that they never become fully depleted or else their Tamagotchi will die.
+ When the game begins, the user will see the character that they selected inside of the Tamagotchi device screen. The name and age of the Tamagotchi will be displayed in the top left hand corner of the screen. At ages 5 and 10, the Tamagotchi will evolve into a new version of itself. There will also be progress bars that display how satiated, energized, and happy the Tamagotchi is. These bars will continuosly decrement as the game goes on. The user will have to monitor these bars and make sure that they never become fully depleted or else their Tamagotchi will die.
  
- On the bottom of the device, there will be four buttons that allow for the user to put their Tamagotchi to sleep, feed it, play with it, and walk it. Clicking these buttons will increase the value of the corresponding progression bar and trigger an animation. On the top of the device there will be a reset button that can be pressed at any time to take the user back to the "Welcome to Super Tamagotchi Bros" page. This will be how users can start a new game when their Tamagotchi dies or when they decide that they want to use a different character.
+ On the bottom of the device, there will be four buttons that allow for the user to put their Tamagotchi to sleep, feed it, play with it, and walk it. Clicking these buttons will increase the value of the corresponding progression bar and trigger an animation. On the top of the device there will be a reset button that can be pressed at any time to take the user back to the "Welcome to Super Tamagotchi Bros" page. This will be how users can start a new game when their Tamagotchi dies or when they decide that they want to use a different character. 
 
 
 ## Wireframes
