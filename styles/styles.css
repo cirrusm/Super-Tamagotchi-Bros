@@ -130,7 +130,7 @@ img {
 }
 
 .night {
-    background-image: url("/images/back488x388.png")
+    background-image: url("images/back488x388.png")
 }
 
 #screen {
@@ -142,7 +142,7 @@ img {
     display: flex;
     flex-direction: column;
     border: solid 4px black;
-    background-image: url("/images/resizedbackkk.png");
+    background-image: url("images/resizedbackkk.png");
     border-radius: 3%;
     max-height: 378px;
     
@@ -151,7 +151,7 @@ img {
 }
 
 body {
-    background-image: url('/images/aec6eaa71938036b649a16cd9a5c99ae.jpg');
+    background-image: url('images/aec6eaa71938036b649a16cd9a5c99ae.jpg');
     background-size: cover;
     height: 100vh;
     background-repeat: no-repeat;

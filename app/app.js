@@ -113,7 +113,7 @@ function mariopress() {
 }
 
 function luigipress(){
-    $('#baby-mario').attr('src', '/images/output-onlinepngtools (7).png')
+    $('#baby-mario').attr('src', 'images/output-onlinepngtools (7).png')
     $('#device').show()
     $('#select').hide()
     startTimer()
@@ -123,7 +123,7 @@ function luigipress(){
 }
 
 function bowserpress() {
-    $('#baby-mario').attr('src', '/images/output-onlinepngtools (9).png')
+    $('#baby-mario').attr('src', 'images/output-onlinepngtools (9).png')
     $('#device').show()
     $('#select').hide()
     startTimer()
@@ -132,7 +132,7 @@ function bowserpress() {
 }
 
 function peachpress() {
-    $('#baby-mario').attr('src', '/images/babypeach.png')
+    $('#baby-mario').attr('src', 'images/babypeach.png')
     $('#device').show()
     $('#select').hide()
     startTimer()
@@ -142,7 +142,7 @@ function peachpress() {
 }
 
 function dkpress() {
-    $('#baby-mario').attr('src', '/images/output-onlinepngtools (22).png')
+    $('#baby-mario').attr('src', 'images/output-onlinepngtools (22).png')
     $('#device').show()
     $('#select').hide()
     startTimer()
@@ -200,25 +200,25 @@ function startTimer() {
 // *******************************EVOLVE FUNCTIONS***********************
 function evolve() {
     if(years === 5 && char == 1)
-    $('#baby-mario').attr('src', '/images/output-onlinepngtools (1).png')
+    $('#baby-mario').attr('src', 'images/output-onlinepngtools (1).png')
     else if ( years === 10 && char == 1) {
-    $('#baby-mario').attr('src', '/images/output-onlinepngtools (12).png')  
+    $('#baby-mario').attr('src', 'images/output-onlinepngtools (12).png')  
 } else if ( years == 5 && char == 2) {
-    $('#baby-mario').attr('src', '/images/output-onlinepngtools (10).png')
+    $('#baby-mario').attr('src', 'images/output-onlinepngtools (10).png')
 } else if (years == 10 && char == 2){
-$('#baby-mario').attr('src', '/images/output-onlinepngtools (11).png')
+$('#baby-mario').attr('src', 'images/output-onlinepngtools (11).png')
 }else if (years == 5 && char == 3){
-    $('#baby-mario').attr('src','/images/output-onlinepngtools (13).png')
+    $('#baby-mario').attr('src','images/output-onlinepngtools (13).png')
 }else if (years == 10 && char == 3){
-$('#baby-mario').attr('src', '/images/output-onlinepngtools (14).png')
+$('#baby-mario').attr('src', 'images/output-onlinepngtools (14).png')
 } else if ( years == 5 && char == 4) {
-    $('#baby-mario').attr('src', '/images/output-onlinepngtools (19).png')
+    $('#baby-mario').attr('src', 'images/output-onlinepngtools (19).png')
 } else if (years == 10 && char == 4){
-$('#baby-mario').attr('src', '/images/output-onlinepngtools (20).png')
+$('#baby-mario').attr('src', 'images/output-onlinepngtools (20).png')
 }else if (years == 5 && char == 5){
-    $('#baby-mario').attr('src','/images/output-onlinepngtools (21).png')
+    $('#baby-mario').attr('src','images/output-onlinepngtools (21).png')
 }else if (years == 10 && char == 5){
-$('#baby-mario').attr('src', '/images/output-onlinepngtools (24).png')
+$('#baby-mario').attr('src', 'images/output-onlinepngtools (24).png')
 }
 }
 
@@ -235,7 +235,7 @@ $('#reset').on('click', function() {
    
     $('#device').css('background-color', 'rgb(205, 245, 189)')
     $('#mushroom').css('animation', '')
-    $('#screen').css('background-image', 'url("/images/resizedbackkk.png")')
+    $('#screen').css('background-image', 'url("images/resizedbackkk.png")')
     $('#ball').css('animation', '')
     $('#hunger').val(hungervalue)
     $('#tiredness').val(energyvalue)
