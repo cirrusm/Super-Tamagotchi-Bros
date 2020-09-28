@@ -29,7 +29,7 @@ feed = function () {
     $('#ball').css('animation', '')
     $('#baby-mario').css('animation', 'eat 8s ease')
     $('#mushroom').css('animation', 'mush 2.5s ease 2.8s')
-    $('#screen').css('background-image', 'url("/images/resizedbackkk.png")')
+    $('#screen').css('background-image', 'url("../images/resizedbackkk.png")')
 
     if(hungervalue < 10) {
     this.hunger += 3
@@ -43,7 +43,7 @@ sleep = function () {
     $('#baby-mario').css('animation', 'lay 8s ease')
         $('#ball').css('animation', '')
         $('#mushroom').css('animation', '')
-        $('#screen').css('background-image', 'url("/images/back488x388.png")')
+        $('#screen').css('background-image', 'url("../images/back488x388.png")')
     if(energyvalue < 10) {
         this.energy += 3
         energyvalue += 3
@@ -57,7 +57,7 @@ play = function() {
     $('#baby-mario').css('animation', 'playball 7.5s ease')
     $('#ball').css('animation', 'bounce 6s ease')
     $('#mushroom').css('animation', '')
-    $('#screen').css('background-image', 'url("/images/resizedbackkk.png")')
+    $('#screen').css('background-image', 'url("../images/resizedbackkk.png")')
     if (boredvalue < 10) {
         this.bored += 3
         boredvalue += 3
@@ -79,7 +79,7 @@ walk.on('click', function() {
     $('#baby-mario').css('animation', 'move 10s infinite')
     $('#ball').css('animation', '')
     $('#mushroom').css('animation', '')
-    $('#screen').css('background-image', 'url("/images/resizedbackkk.png")')
+    $('#screen').css('background-image', 'url("../images/resizedbackkk.png")')
 })
 
 
