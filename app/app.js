@@ -1,8 +1,9 @@
-let character = $('#character')
+//buttons
 let feed = $('#feed')
 let sleep = $('#sleep')
 let play = $('#play')
 let walk = $('#walk')
+//progression bars
 let hungervalue = $('#hunger').val()
 let energyvalue = $('#tiredness').val()
 let boredvalue = $('#boredom').val()
@@ -11,10 +12,12 @@ let months = 0
 let years = 0
 let char = 0
 
+//hidden at start of the game
 $('#device').hide()
 $('#select').hide()
 $('#lose').hide()
 
+//Tomogachi functions
 class Tomogachi {
     constructor(hungervalue, energyvalue, boredvalue,){
     this.hunger = hungervalue
@@ -72,14 +75,6 @@ feed.on('click', mario.feed)
 sleep.on('click', mario.sleep)
 play.on('click', mario.play)
 start.on('click', presscontinue)
-
-$('#marioselect').on('click', mariopress)
-$('#luigiselect').on('click', luigipress)
-$('#bowserselect').on('click', bowserpress)
-$('#peachselect').on('click', peachpress)
-$('#dkselect').on('click', dkpress)
-
-
 walk.on('click', function() {
     $('#baby-mario').css('animation', 'move 10s infinite')
     $('#ball').css('animation', '')
@@ -88,7 +83,18 @@ walk.on('click', function() {
 })
 
 
-//******************PRESSING BUTTON FUNCTIONS*************************
+//*****************************CHARACTER SELECTION LISTENERS *********************/
+
+$('#marioselect').on('click', mariopress)
+$('#luigiselect').on('click', luigipress)
+$('#bowserselect').on('click', bowserpress)
+$('#peachselect').on('click', peachpress)
+$('#dkselect').on('click', dkpress)
+
+
+
+
+//******************CHARACTER SELECTION FUNCTIONS*************************
 
 function presscontinue() {
 $('header').hide()
@@ -98,8 +104,6 @@ $('#baby-mario').css('animation', 'move 10s infinite')
 
 function mariopress() {
     $('#baby-mario').attr('src', 'images/baby mario.png')
-    
-
     $('#device').show()
     $('#select').hide()
     startTimer()
@@ -145,7 +149,7 @@ function dkpress() {
     char = 5
     return char
 }
-//make peach and dk press functions
+
 
 
 //**************************** TIMER FUNCTIONS ******************************** */
@@ -157,21 +161,23 @@ function timerEffects() {
         $('.gameplay').hide()
         start.show()
         clearInterval(timer)
+        $('#loseh1').text(`YOU LET ${$('#name-input').val().toUpperCase()} DIE \n GAME OVER`)
         
         
         
         
     }else{
     evolve()
-    hungervalue -= .06
-    energyvalue -= .04
-    boredvalue -= .02
+    hungervalue -= .12
+    energyvalue -= .08
+    boredvalue -= .05
     $('.gameplay').show()
     $('#hunger').val(hungervalue)
     $('#tiredness').val(energyvalue)
     $('#boredom').val(boredvalue)
+    //Age conditionals
     if(months < 11) {
-    months += .5
+    months += .4
     $('#age').text(`Age: ${years} years ${Math.floor(months)} months`)
     }else{
         months = 0
@@ -183,7 +189,7 @@ function timerEffects() {
 }
 
 function startTimer() {
-    timer = setInterval(timerEffects, 500)
+    timer = setInterval(timerEffects, 800)
     $('#age').text(`Age: Newborn`)
     $('#name').text(`Name: ${$('#name-input').val()}`)
     $('#device').show()
@@ -205,7 +211,6 @@ $('#baby-mario').attr('src', '/images/output-onlinepngtools (11).png')
     $('#baby-mario').attr('src','/images/output-onlinepngtools (13).png')
 }else if (years == 10 && char == 3){
 $('#baby-mario').attr('src', '/images/output-onlinepngtools (14).png')
-//make peach and dk evolve functions
 } else if ( years == 5 && char == 4) {
     $('#baby-mario').attr('src', '/images/output-onlinepngtools (19).png')
 } else if (years == 10 && char == 4){
@@ -236,7 +241,6 @@ $('#reset').on('click', function() {
     $('#tiredness').val(energyvalue)
     $('#boredom').val(boredvalue)
     $('#age').text(`Age: ${years} years ${Math.floor(months)} months`)
-
     $('.gameplay').show()
     $('#lose').hide()
     $('#device').hide()
@@ -244,9 +248,6 @@ $('#reset').on('click', function() {
     
 
 })
-
-
-//**************EXTRAS**********************
 
 //randomize device color
 

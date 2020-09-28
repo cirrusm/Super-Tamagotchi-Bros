@@ -106,15 +106,18 @@ img {
     border-radius: 30px;
 }
 #adjust {
-    background-color: white;
-    justify-content: flex-end;
-    align-items: flex-end;
+    background-color: beige;
+    align-items: center;
     position: relative;
     top: 39px;
     border-radius: 6px;
     border: solid 4px black;
     width: 490px;
     left: -4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
     
 }
 
@@ -246,12 +249,12 @@ progress {
 }
 
 #hunger {
-    margin-left: 42px;
+    margin-left: 40px;
     
 }
 
 #tiredness {
-    margin-left: 44px;
+    margin-left: 47px;
 }
 #start-div {
     display: flex;
@@ -436,11 +439,11 @@ animation: none
     background-color: black;
     color: white;
     height: 370px;
-    top: -30px;
     border-radius: 3px;
     padding-top: 60px;
     position: absolute;
     overflow: visible;
+    
 }
 
 
