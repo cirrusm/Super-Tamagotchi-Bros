@@ -1,9 +1,9 @@
-//buttons
+//button cache
 let feed = $('#feed')
 let sleep = $('#sleep')
 let play = $('#play')
 let walk = $('#walk')
-//progression bars
+//progression bar cache
 let hungervalue = $('#hunger').val()
 let energyvalue = $('#tiredness').val()
 let boredvalue = $('#boredom').val()
@@ -29,7 +29,7 @@ feed = function () {
     $('#ball').css('animation', '')
     $('#baby-mario').css('animation', 'eat 8s ease')
     $('#mushroom').css('animation', 'mush 2.5s ease 2.8s')
-    $('#screen').css('background-image', 'url("../images/resizedbackkk.png")')
+    $('#screen').css('background-image', 'url("images/resizedbackkk.png")')
 
     if(hungervalue < 10) {
     this.hunger += 3
@@ -57,7 +57,7 @@ play = function() {
     $('#baby-mario').css('animation', 'playball 7.5s ease')
     $('#ball').css('animation', 'bounce 6s ease')
     $('#mushroom').css('animation', '')
-    $('#screen').css('background-image', 'url("../images/resizedbackkk.png")')
+    $('#screen').css('background-image', 'url("images/resizedbackkk.png")')
     if (boredvalue < 10) {
         this.bored += 3
         boredvalue += 3
@@ -79,7 +79,7 @@ walk.on('click', function() {
     $('#baby-mario').css('animation', 'move 10s infinite')
     $('#ball').css('animation', '')
     $('#mushroom').css('animation', '')
-    $('#screen').css('background-image', 'url("../images/resizedbackkk.png")')
+    $('#screen').css('background-image', 'url("images/resizedbackkk.png")')
 })
 
 
