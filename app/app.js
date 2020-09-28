@@ -43,7 +43,7 @@ sleep = function () {
     $('#baby-mario').css('animation', 'lay 8s ease')
         $('#ball').css('animation', '')
         $('#mushroom').css('animation', '')
-        $('#screen').css('background-image', 'url("../images/back488x388.png")')
+        $('#screen').css('background-image', 'url("images/back488x388.png")')
     if(energyvalue < 10) {
         this.energy += 3
         energyvalue += 3
